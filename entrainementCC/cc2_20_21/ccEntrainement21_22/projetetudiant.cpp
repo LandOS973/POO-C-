@@ -1,6 +1,7 @@
 #include "projetetudiant.h"
 #include <algorithm>
 
+
 const std::string &personnel::nom() const
 {
     return _nom;
@@ -22,9 +23,9 @@ std::ostream & operator<<(std::ostream &os,personnel const &S){
 std::string personnel::afficheTypePersonne() const
 {
     switch (typePers()) {
-    case typePersonne::enseignant:return " enseignant ";        break;
-    case typePersonne::M1:return " M1 ";        break;
-    case typePersonne::M2:return " M2 ";        break;
+    case typePersonne::enseignant:return " enseignant "; break;
+    case typePersonne::M1:return " M1 "; break;
+    case typePersonne::M2:return " M2 "; break;
     default: return "";
         break;
     };
@@ -179,29 +180,31 @@ std::ostream & operator<<(std::ostream &os,universite const &S){
 
 void universite::saisiem2()
 {
-    std::cout<<"Saisi le niveau d'expertise";
-    int x;
-    std::cin>>x;
-    std::string nom;
-    std::cout<<"Saisi le nom ";
-    std::cin>>nom;
-    auto M2 = etudiantM2::fabrique(x,nom);
-    while (M2 = nullptr) {
+    try{
         std::cout<<"Saisi le niveau d'expertise";
+        int x;
         std::cin>>x;
+        std::string nom;
         std::cout<<"Saisi le nom ";
         std::cin>>nom;
-        M2 = etudiantM2::fabrique(x,nom);
-    }
-    bool test = ajout(M2);
-    while(test == false){
-        std::cout<<"Saisi le niveau d'expertise";
-        std::cin>>x;
-        std::cout<<"Saisi le nom ";
-        std::cin>>nom;
-        M2 = etudiantM2::fabrique(x,nom);
+        auto M2 = etudiantM2::fabrique(x,nom);
+        while (M2 = nullptr) {
+            std::cout<<"Saisi le niveau d'expertise";
+            std::cin>>x;
+            std::cout<<"Saisi le nom ";
+            std::cin>>nom;
+            M2 = etudiantM2::fabrique(x,nom);
+        }
         ajout(M2);
+    }catch(const exceptionuniversite &e){
+        std::cout<<e.what();
     }
+
+}
+
+const std::vector<std::shared_ptr<personnel> > &universite::personnes() const
+{
+    return _personnes;
 }
 
 
@@ -228,37 +231,42 @@ saisiem2qt::saisiem2qt(const universite &U):QWidget(),
     _U(U)
 {
     // INITIALISTATION (passage par liste d'iniatialisation donne des warning)
+    layout = new QHBoxLayout(window());
     _niveauexpertise = new QLineEdit("",this);
     _nom = new QLineEdit("",this);
     _quitter = new QPushButton("quitter",this);
     _ajouter = new QPushButton("Ajouter",this);
     _resultat = new QLabel("",this);
-    resize(1000,500);
-    _niveauexpertise->setGeometry(10,10,200,50);
-    _nom->setGeometry(250,10,150,30);
+    layout->addWidget(_niveauexpertise);
+    layout->addWidget(_nom);
+    layout->addWidget(_ajouter);
+    layout->addWidget(_quitter);
+    layout->addWidget(_resultat);
     setWindowTitle("CC");
-    _resultat->setGeometry(350,300,300,30);
-    _quitter->setGeometry(520,10,100,30);
-    _ajouter->setGeometry(260,200,100,100);
     connect(_quitter,&QPushButton::clicked,this,&saisiem2qt::close);
     connect(_ajouter,&QPushButton::clicked,this,&saisiem2qt::ajouter);
 }
 
 void saisiem2qt::ajouter()
 {
-    std::string nom(_nom->text().toStdString());
-    auto niveau(_niveauexpertise->text().toInt());
-    auto M2 = etudiantM2::fabrique(niveau,nom);
-    if(M2 == nullptr){
-       _resultat->setText("<font color='black'>Information invalide</font>");
+    try{
+        auto nom(_nom->text().toStdString());
+        auto niveau(_niveauexpertise->text().toInt());
+        auto M2 = etudiantM2::fabrique(niveau,nom);
+        if(M2 == nullptr){
+            _resultat->setText("<font color='black'>Niveau expertise invalide</font>");
+        }else{
+            _U.ajout(M2);
+        }
+        std::string resultat = "<font color='black'>Utilisateur " + M2->nom() + " a été ajouté !\n";
+        for(auto const &i: _U.personnes()){
+            resultat += i->nom() + " \n";
+        }
+        resultat += "</font>";
+        _resultat->setText(QString::fromStdString(resultat));
+    }catch(const exceptionuniversite &e){
+        _resultat->setText("<font color='black'>Nom déja présent dans l'universite</font>");
     }
-    bool test = _U.ajout(M2);
-    if(!test){
-        _resultat->setText("<font color='black'>Information invalide</font>");
-    }else{
-        _resultat->setText("<font color='black'>Etudiant a bien été ajouté !</font>");
-    }
-
 }
 
 

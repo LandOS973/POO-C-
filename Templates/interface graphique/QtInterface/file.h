@@ -6,6 +6,7 @@
 #include <QComboBox>
 #include <QLabel>
 #include <QPushButton>
+#include <QHBoxLayout>
 
 
 // ################### QT ######################
@@ -18,6 +19,7 @@ private:
     QPushButton *_ajouter;
     QPushButton *_quitter;
     QLabel *_resultat;
+    QHBoxLayout *layout;
 public:
     maClass();
 public slots:

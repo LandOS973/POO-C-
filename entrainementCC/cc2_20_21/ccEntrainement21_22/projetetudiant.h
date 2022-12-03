@@ -8,6 +8,7 @@
 #include <QComboBox>
 #include <QLabel>
 #include <QPushButton>
+#include <QHBoxLayout>
 
 // ############################ ETUDIANT ##############################
 
@@ -117,6 +118,8 @@ public:
     void ajout(projet const &P);
     std::vector<std::shared_ptr<etudiantM1> > rechercherdevs(languages const & l)const;
     void saisiem2();
+    const std::vector<std::shared_ptr<personnel> > &personnes() const;
+
 private:
     std::vector<std::shared_ptr <personnel>> _personnes;
     std::vector<projet> _ensembleDeProjet;
@@ -135,6 +138,7 @@ private:
     QPushButton *_ajouter;
     QPushButton *_quitter;
     QLabel *_resultat;
+    QHBoxLayout *layout;
 public:
     saisiem2qt(universite const &U);
 public slots:

@@ -89,6 +89,7 @@
   /usr/include/QtGui/qvalidator.h \
   /usr/include/QtGui/qwindowdefs.h \
   /usr/include/QtWidgets/QComboBox \
+  /usr/include/QtWidgets/QHBoxLayout \
   /usr/include/QtWidgets/QLabel \
   /usr/include/QtWidgets/QLineEdit \
   /usr/include/QtWidgets/QPushButton \
@@ -97,9 +98,13 @@
   /usr/include/QtWidgets/qabstractitemdelegate.h \
   /usr/include/QtWidgets/qabstractslider.h \
   /usr/include/QtWidgets/qabstractspinbox.h \
+  /usr/include/QtWidgets/qboxlayout.h \
   /usr/include/QtWidgets/qcombobox.h \
   /usr/include/QtWidgets/qframe.h \
+  /usr/include/QtWidgets/qgridlayout.h \
   /usr/include/QtWidgets/qlabel.h \
+  /usr/include/QtWidgets/qlayout.h \
+  /usr/include/QtWidgets/qlayoutitem.h \
   /usr/include/QtWidgets/qlineedit.h \
   /usr/include/QtWidgets/qpushbutton.h \
   /usr/include/QtWidgets/qrubberband.h \

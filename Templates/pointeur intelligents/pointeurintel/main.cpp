@@ -9,7 +9,7 @@ int main()
     auto pup = produitperissable::fabriqueUniquePtr("2/2/2","miam+",5);
     stock S;
     // ajout shared
-    S.ajouter(psp);
+    S.ajouter(std::move(psp));
     // ajout unique
     S.ajouter(std::move(pup));
     stock S2;
