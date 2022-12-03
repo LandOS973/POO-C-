@@ -57,6 +57,7 @@ public:
     stock &operator=(const stock &s);
     ~stock() = default;
     void ajouter(std::unique_ptr<produit> p);
+    void ajouterUniquePtrConvertitEnSharedPtr(std::unique_ptr<produit> p);
     void ajouter(std::shared_ptr<produit> p);
     void utilisationDynamicCast()const;
     // sortie <<

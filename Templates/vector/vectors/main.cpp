@@ -4,46 +4,57 @@
 
 using namespace std;
 
+class test{
+public:
+    test(int a);
+    int x;
+};
+
+test::test(int a):x(a){}
+
 int main()
 {
     std::vector<int> V;
-    for(std::vector<int>::size_type i(0); i<_produits.size(); ++i){
+    for(std::vector<int>::size_type i(0); i<V.size(); ++i){
 
     }
 
     // ERASE
     for (std::vector<int>::iterator it = V.begin(); it != V.end();)
     {
-        if (conditional)
+        if (*it == 4)
             it = V.erase(it);
         else
             ++it;
     }
 
-    // ajout
-    V.push_back(5);
-
     //tout supprimer
     V.clear();
 
+    // ajout
+    V.push_back(5);
+
     // FIND (include algorithm)
-    std::vector<int>::interator i = find(V.begin(), V.end(), elementacherché);
+    std::vector<int>::iterator i = find(V.begin(), V.end(), 5);
     if (i != V.end()) {
-        // found it
+        std::cout<<"trouvé!";
     } else {
-        // doesn't exist
+        std::cout<<"pas trouvé!";
     }
 
+
+
     // FIND IF (fonction anonyme)
-    for (int i = 1; i < V.size(); ++i) {
-        auto f = std::find_if(V.begin(),V.end(),[i](auto const &p){
-            return (p->id() == i); // exemple de condition
-        });
-        if(f == V.end()){
-            // rien trouvé;
-        }else{
-            // trouvé !;
-        }
+    std::vector<test> v;
+    v.push_back(test(1));
+    int valRecherché = 1;
+    auto f = std::find_if(v.begin(),v.end(),[valRecherché](auto const &p){
+        return (p.x == valRecherché);
+    });
+    if(f == v.end()){
+        std::cout<<"pas trouvé!";
+    }else{
+        std::cout<<"trouvé!";
     }
 
     return 0;

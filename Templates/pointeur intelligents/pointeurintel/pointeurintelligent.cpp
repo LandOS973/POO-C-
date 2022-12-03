@@ -74,9 +74,16 @@ void stock::ajouter(std::unique_ptr<produit> p)
     _produitsUniquePtr.push_back(std::move(p));
 }
 
+void stock::ajouterUniquePtrConvertitEnSharedPtr(std::unique_ptr<produit> p)
+{
+    // CONVERTIR UNIQUE PTR TO SHARED PTR
+    std::shared_ptr<produit> sp2 = std::move(p);
+    _produitsSharedPtr.push_back(std::move(sp2));
+}
+
 void stock::ajouter(std::shared_ptr<produit> p)
 {
-    _produitsSharedPtr.push_back(p->cloneSharedPtr());
+    _produitsSharedPtr.push_back(std::move(p));
 }
 
 void stock::utilisationDynamicCast() const
