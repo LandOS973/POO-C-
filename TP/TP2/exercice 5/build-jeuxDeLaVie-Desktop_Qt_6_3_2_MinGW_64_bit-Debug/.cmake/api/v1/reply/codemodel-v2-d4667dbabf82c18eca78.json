@@ -1,0 +1,61 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-6be543c30658af80f6f4.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "jeuxDeLaVie",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "jeuxDeLaVie::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-jeuxDeLaVie-Debug-dc824aab8967f96cd208.json",
+					"name" : "jeuxDeLaVie",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/33645/OneDrive - univ-angers.fr/L3 informatique/POO C++/TP/TP2/exercice 5/build-jeuxDeLaVie-Desktop_Qt_6_3_2_MinGW_64_bit-Debug",
+		"source" : "C:/Users/33645/OneDrive - univ-angers.fr/L3 informatique/POO C++/TP/TP2/exercice 5/jeuxDeLaVie"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

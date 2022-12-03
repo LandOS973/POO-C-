@@ -1,0 +1,19 @@
+# ninja log v5
+3	650	1667815837488459053	CMakeFiles/bibliotheque.dir/livres.cpp.o	9f8e2e62b5394d89
+4	575	1667815837416459223	CMakeFiles/bibliotheque.dir/video.cpp.o	9cc2d1cfabfb33e6
+4	683	1667815837524458969	CMakeFiles/bibliotheque.dir/documentecrit.cpp.o	8faf2d1fe83a6b2f
+3	541	1667822913568421234	CMakeFiles/bibliotheque.dir/bibliotheque.cpp.o	b1651affeb02e45a
+541	676	1667822913704423387	bibliotheque	4b6f63e831209676
+3	487	1667822913516420411	CMakeFiles/bibliotheque.dir/main.cpp.o	767673dcd03e1998
+2	43	1668417796286113430	build.ninja	38e763ef4902c496
+4	635	1667815837476459081	CMakeFiles/bibliotheque.dir/document.cpp.o	8826d256d5c584db
+3	697	1667815837536458941	CMakeFiles/bibliotheque.dir/periodique.cpp.o	79eda2716a318e34
+1	39	1668417796286113430	build.ninja	38e763ef4902c496
+3	820	1668417797114083628	CMakeFiles/bibliotheque.dir/document.cpp.o	8826d256d5c584db
+3	825	1668417797118083484	CMakeFiles/bibliotheque.dir/video.cpp.o	9cc2d1cfabfb33e6
+2	841	1668417797134082907	CMakeFiles/bibliotheque.dir/livres.cpp.o	9f8e2e62b5394d89
+4	854	1668417797150082330	CMakeFiles/bibliotheque.dir/main.cpp.o	767673dcd03e1998
+2	914	1668417797210080167	CMakeFiles/bibliotheque.dir/periodique.cpp.o	79eda2716a318e34
+2	938	1668417797234079301	CMakeFiles/bibliotheque.dir/documentecrit.cpp.o	8faf2d1fe83a6b2f
+1	947	1668417797242079013	CMakeFiles/bibliotheque.dir/bibliotheque.cpp.o	b1651affeb02e45a
+947	1064	1668417797358074831	bibliotheque	4b6f63e831209676

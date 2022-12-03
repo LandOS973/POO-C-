@@ -1,0 +1,7 @@
+/home/landos/controle cpp/build-controlecpp-Qt6-Debug/CMakeFiles/controlecpp.dir
+/home/landos/controle cpp/build-controlecpp-Qt6-Debug/CMakeFiles/edit_cache.dir
+/home/landos/controle cpp/build-controlecpp-Qt6-Debug/CMakeFiles/rebuild_cache.dir
+/home/landos/controle cpp/build-controlecpp-Qt6-Debug/CMakeFiles/list_install_components.dir
+/home/landos/controle cpp/build-controlecpp-Qt6-Debug/CMakeFiles/install.dir
+/home/landos/controle cpp/build-controlecpp-Qt6-Debug/CMakeFiles/install/local.dir
+/home/landos/controle cpp/build-controlecpp-Qt6-Debug/CMakeFiles/install/strip.dir

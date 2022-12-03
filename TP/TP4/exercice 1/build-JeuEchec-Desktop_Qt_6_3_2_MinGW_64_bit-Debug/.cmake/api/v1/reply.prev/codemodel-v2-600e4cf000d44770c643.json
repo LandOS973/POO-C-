@@ -1,0 +1,61 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-2d7fd3882bb614279629.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "JeuEchec",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "JeuEchec::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-JeuEchec-Debug-31c1eab297a9c93b7883.json",
+					"name" : "JeuEchec",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/33645/OneDrive - univ-angers.fr/L3 informatique/POO C++/TP/TP4/exercice 1/build-JeuEchec-Desktop_Qt_6_3_2_MinGW_64_bit-Debug",
+		"source" : "C:/Users/33645/OneDrive - univ-angers.fr/L3 informatique/POO C++/TP/TP4/exercice 1/JeuEchec"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

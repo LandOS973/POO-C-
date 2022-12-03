@@ -1,0 +1,7 @@
+C:/Users/thoma/OneDrive - univ-angers.fr/L3 informatique/POO C++/TP/TP2/exercice 4/build-sequence-Desktop-Debug/CMakeFiles/sequence.dir
+C:/Users/thoma/OneDrive - univ-angers.fr/L3 informatique/POO C++/TP/TP2/exercice 4/build-sequence-Desktop-Debug/CMakeFiles/edit_cache.dir
+C:/Users/thoma/OneDrive - univ-angers.fr/L3 informatique/POO C++/TP/TP2/exercice 4/build-sequence-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/thoma/OneDrive - univ-angers.fr/L3 informatique/POO C++/TP/TP2/exercice 4/build-sequence-Desktop-Debug/CMakeFiles/list_install_components.dir
+C:/Users/thoma/OneDrive - univ-angers.fr/L3 informatique/POO C++/TP/TP2/exercice 4/build-sequence-Desktop-Debug/CMakeFiles/install.dir
+C:/Users/thoma/OneDrive - univ-angers.fr/L3 informatique/POO C++/TP/TP2/exercice 4/build-sequence-Desktop-Debug/CMakeFiles/install/local.dir
+C:/Users/thoma/OneDrive - univ-angers.fr/L3 informatique/POO C++/TP/TP2/exercice 4/build-sequence-Desktop-Debug/CMakeFiles/install/strip.dir

@@ -1,0 +1,7 @@
+Digraph G{
+c1 [label="Paris"];
+c1 -> c2 [label="bus"] ;
+c1 -> c3 [label="Avion"] ;
+c3 [label="Nantes"];
+c3 -> c2 [label="Bus"] ;
+}

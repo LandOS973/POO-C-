@@ -1,0 +1,14 @@
+# ninja log v5
+1	363	6852804305671494	build.ninja	9e6db10772aeefec
+5	671	6852803209933565	CMakeFiles/exercice3.dir/main.cpp.obj	56c25a3a907d4bf4
+521	674	6852804300265847	exercice3.exe	6cea6668783373bc
+6	518	6852804298725492	CMakeFiles/exercice3.dir/sequence.cpp.obj	5dae5dd168fbe138
+9	773	6852808916557883	CMakeFiles/exercice3.dir/sequence.cpp.obj	5dae5dd168fbe138
+6	628	6852809027885965	CMakeFiles/exercice3.dir/main.cpp.obj	56c25a3a907d4bf4
+629	778	6852809029366175	exercice3.exe	6cea6668783373bc
+8	873	6852811120054247	CMakeFiles/exercice3.dir/sequence.cpp.obj	5dae5dd168fbe138
+5	486	6852811271418041	CMakeFiles/exercice3.dir/main.cpp.obj	56c25a3a907d4bf4
+487	615	6852811272776491	exercice3.exe	6cea6668783373bc
+6	807	6852811829965480	CMakeFiles/exercice3.dir/main.cpp.obj	56c25a3a907d4bf4
+11	830	6852811830125541	CMakeFiles/exercice3.dir/sequence.cpp.obj	5dae5dd168fbe138
+831	988	6852811831729858	exercice3.exe	6cea6668783373bc
