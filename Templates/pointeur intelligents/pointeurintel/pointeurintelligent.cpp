@@ -23,18 +23,18 @@ produitperissable::produitperissable(const std::string &peremption, const std::s
     _peremption(peremption)
 {}
 
-std::unique_ptr<produit> produitperissable::fabriqueUniquePtr(const std::string &peremption, const std::string &nom, float prixHT)
+std::unique_ptr<produitperissable> produitperissable::fabriqueUniquePtr(const std::string &peremption, const std::string &nom, float prixHT)
 {
     if(prixHT > 0){
-        return std::unique_ptr<produit>(new produitperissable(peremption,nom,prixHT));
+        return std::unique_ptr<produitperissable>(new produitperissable(peremption,nom,prixHT));
     }
     return nullptr;
 }
 
-std::shared_ptr<produit> produitperissable::fabriqueSharedPtr(const std::string &peremption, const std::string &nom, float prixHT)
+std::shared_ptr<produitperissable> produitperissable::fabriqueSharedPtr(const std::string &peremption, const std::string &nom, float prixHT)
 {
     if(prixHT > 0){
-        return std::shared_ptr<produit>(new produitperissable(peremption,nom,prixHT));
+        return std::shared_ptr<produitperissable>(new produitperissable(peremption,nom,prixHT));
     }
     return nullptr;
 }
@@ -69,7 +69,7 @@ stock::stock(const stock &s)
     }
 }
 
-void stock::ajouter(std::unique_ptr<produit> p)
+void stock::ajouterUnique(std::unique_ptr<produit> p)
 {
     _produitsUniquePtr.push_back(std::move(p));
 }
@@ -81,7 +81,7 @@ void stock::ajouterUniquePtrConvertitEnSharedPtr(std::unique_ptr<produit> p)
     _produitsSharedPtr.push_back(std::move(sp2));
 }
 
-void stock::ajouter(std::shared_ptr<produit> p)
+void stock::ajouterShared(std::shared_ptr<produit> p)
 {
     _produitsSharedPtr.push_back(std::move(p));
 }

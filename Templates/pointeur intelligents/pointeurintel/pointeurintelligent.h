@@ -34,8 +34,8 @@ private:
     produitperissable(const std::string &peremption, const std::string &nom, float prixHT);
 public:
     // CONSTRUCTEURS
-    static std::unique_ptr<produit>fabriqueUniquePtr(const std::string &peremption, const std::string &nom, float prixHT);
-    static std::shared_ptr<produit>fabriqueSharedPtr(const std::string &peremption, const std::string &nom, float prixHT);
+    static std::unique_ptr<produitperissable>fabriqueUniquePtr(const std::string &peremption, const std::string &nom, float prixHT);
+    static std::shared_ptr<produitperissable>fabriqueSharedPtr(const std::string &peremption, const std::string &nom, float prixHT);
     void sortieflux(std::ostream &os) const override;
     // UNIQUE PTR
     std::unique_ptr<produit> cloneUniquePtr() const override;
@@ -56,9 +56,9 @@ public:
     stock(stock const &s);
     stock &operator=(const stock &s);
     ~stock() = default;
-    void ajouter(std::unique_ptr<produit> p);
+    void ajouterUnique(std::unique_ptr<produit> p);
     void ajouterUniquePtrConvertitEnSharedPtr(std::unique_ptr<produit> p);
-    void ajouter(std::shared_ptr<produit> p);
+    void ajouterShared(std::shared_ptr<produit> p);
     void utilisationDynamicCast()const;
     // sortie <<
     friend std::ostream & operator<<(std::ostream &os,stock const &S);
