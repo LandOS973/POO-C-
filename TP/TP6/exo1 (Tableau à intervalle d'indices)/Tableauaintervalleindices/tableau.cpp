@@ -18,7 +18,7 @@ int arrayint::indicemax() const
 
 int arrayint::at(int indice) const
 {
-    if(indice < indicemin() || indice >= indicemax()) throw exceptionarrayint(indice,"indice error method at()!");
+    if(indice < indicemin() || indice >= indicemax()) throw exceptionarrayint(indice, "error method at()! a l'indice : " + std::to_string(indice));
     else return _elements[indice - indicemin()];
 }
 
@@ -32,6 +32,34 @@ int &arrayint::operator[](int i)
 {
     if(i < indicemin() || i >= indicemax()) throw exceptionarrayint(i,"indice error method operator[]!");
     else return _elements[i - indicemin()];
+}
+
+bool arrayint::operator==(const arrayint &p) const
+{
+    if(_elements.size() != p._elements.size()) return false;
+    for(int i = p.indicemin() ; i < p.indicemax() ; i++){
+       if(_elements[i] != p._elements[i]) return false;
+    }
+    return true;
+}
+
+
+std::ostream & operator<<(std::ostream &os,arrayint const &S){
+    for(int i = S.indicemin() ; i < S.indicemax() ; i++){
+        os<<S.at(i);
+    }
+    return os;
+}
+
+arrayint &arrayint::operator=(const arrayint &s)
+{
+    if(this != &s){
+        _elements.clear();
+        for(auto const &p : s._elements){
+            _elements.push_back(p); // clone
+        }
+    }
+    return *this;
 }
 
 //#################### EXCEPTION ##########################

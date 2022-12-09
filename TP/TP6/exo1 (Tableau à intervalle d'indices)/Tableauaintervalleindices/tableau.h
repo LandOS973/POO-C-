@@ -18,6 +18,12 @@ public:
     int at(int indice) const;
     void set(int val,int i);
     int &operator[](int i);
+    friend std::ostream & operator<<(std::ostream &os,arrayint const &S);
+    bool operator==(const arrayint &p) const;
+    arrayint &operator=(const arrayint &s);
+
+
+
 private:
     int _indicemin;
     int _indicemax;
@@ -36,3 +42,9 @@ public:
     exceptionarrayint(int indice, const std::string &msg);
     const char *what() const noexcept override;
 };
+
+
+
+
+
+
